@@ -8,3 +8,10 @@
 </p>
 
 ## Branch Ananda Anggie
+qweerrtrty
+
+## Nanda Arfan
+<img src="https://shrouded-wildwood-15294.herokuapp.com/storage/pikachu.gif" alt="Cute Pikachu">
+
+## BRANCH ALEX 
+<p>Hehehehe</p>
