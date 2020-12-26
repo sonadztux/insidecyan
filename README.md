@@ -7,4 +7,17 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Branch Ananda Anggie
+qweerrtrty
+
+## Nanda Arfan
+<img src="https://shrouded-wildwood-15294.herokuapp.com/storage/pikachu.gif" alt="Cute Pikachu">
+
+## BRANCH ALEX 
+<p>Hehehehe</p>
+
+## Tamskuy commit
+<p>Sorry telat</p>
+
 ## Devi
+lroem
