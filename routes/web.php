@@ -10,6 +10,10 @@ Route::get('/profile', function () {
     return view('light/profile');
 })->name('profile.index');
 
+Route::get('/profile/edit', function () {
+    return view('light/profile_edit');
+})->name('profile.edit');
+
 Route::get('/talents', function () {
     return view('light/talent/directory');
 })->name('talent.directory');
