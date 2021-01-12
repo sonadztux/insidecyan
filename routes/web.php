@@ -53,3 +53,7 @@ Route::get('/join/lecture', function () {
 Route::get('/join/company', function () {
     return view('light/auth/company');
 })->name('register.company');
+
+Route::get('/template', function(){
+    return view ('light/template');
+});
