@@ -221,7 +221,7 @@
                                             </a>
                                         </div>
                                         <div class="col">
-                                            <h5>Java Programming</h5>
+                                             <h5>Java Programming</h5>
                                             <div class="progress progress-xs mb-0">
                                                 <div class="progress-bar bg-green" role="progressbar" aria-valuenow="90"
                                                     aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
