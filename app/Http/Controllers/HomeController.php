@@ -29,7 +29,8 @@ class HomeController extends Controller
 
     public function talent_directory()
     {
-        return view('talent_directory');
+        $students = Student::all();
+        return view('talent_directory', compact('students'));
     }
 
     public function student_profile($id)

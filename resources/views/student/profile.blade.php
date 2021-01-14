@@ -22,9 +22,7 @@
                         <div class="row justify-content-left">
                             <div class="col-lg-3 order-lg-2">
                                 <div class="card-profile-image">
-                                    <a href="javascript:;">
-                                        <img src="{{ asset('argon/img/faces/team-4.jpg') }}" class="rounded-circle">
-                                    </a>
+                                    <img src="{{ asset('img') . '/' . $data['name'] . '.jpg' }}">
                                 </div>
                             </div>
                             <div class="col order-lg-3 text-lg-left alight-self-lg-left mt-3">
@@ -36,7 +34,7 @@
                             </div>
                             <div class="order-lg-3 text-lg-right align-self-lg-left mt-2">
                                 <div class="card-profile-actions py-10 mt-lg-0">
-                                    <a href="#" class="btn btn-sm btn-info mr-4">Reccomendation</a>
+                                    {{-- <a href="#" class="btn btn-sm btn-info mr-4">Reccomendation</a> --}}
                                     <a href="{{ route('student_edit_profile_view') }}" class="btn btn-sm btn-default float-right" >Edit Profile</a>
                                 </div>
                             </div>

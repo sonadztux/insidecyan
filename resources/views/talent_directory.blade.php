@@ -136,151 +136,55 @@ Coded by www.creative-tim.com
 
     <div class="container-fluid">
         <div class="row row-cols-4">
-            <div class="col-md-3">
+            @foreach ($students as $student) 
+            <div class="col-md-4">
                 <div class="card" style="width: 22rem;">
                     <div class="card-header">
-                        <img class="card-img" src="img/talent-alex.jpg"
+                        <img class="card-img" src="img/{{ $student['name'] }}.jpg"
                             style="width:300px; height: 300px" alt="Card image cap">
                     </div>
                     <div class="card-body text-default">
-                        <h2>I Gede Pasek Punia Atmaja</h2>
-                        <p><i class="ni ni-circle-08"></i> Developer | 21 Male</p>
-                        <p><i class="ni ni-pin-3"></i> Pemalang, Indonesia</p>
-                        <a href="{{ route('student_profile_id', 1) }}" class="btn btn-primary btn-sm">See detail</a>
+                        <h2>{{ $student['name'] }}</h2>
+                        <p><i class="ni ni-circle-08"></i> {{ $student['specialization'] }} | 21 {{ $student['gender'] }}</p>
+                        <p><i class="ni ni-pin-3"></i> {{ $student['address'] }}, Indonesia</p>
+                        <a href="{{ route('student_profile_id', $student['id']) }}" class="btn btn-primary btn-sm">See detail</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="card" style="width: 22rem;">
-                    <div class="card-header">
-                        <img class="card-img" src="img/talent-devi.jpg"
-                            style="width:300px; height: 300px" alt="Card image cap">
-                    </div>
-                    <div class="card-body text-default">
-                        <h2>Devi Novitasari</h2>
-                        <p><i class="ni ni-circle-08"></i> Model | 19 Female</p>
-                        <p><i class="ni ni-pin-3"></i> Bandung, Indonesia</p>
-                        <a href="{{ route('student_profile_id', 2) }}" class="btn btn-primary btn-sm">See detail</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card" style="width: 22rem;">
-                    <div class="card-header">
-                        <img class="card-img" src="img/talent-tama.jpg"
-                            style="width:300px; height: 300px" alt="Card image cap">
-                    </div>
-                    <div class="card-body text-default">
-                        <h2>Robertus Rotama Marbun</h2>
-                        <p><i class="ni ni-circle-08"></i> Software Engineer | 20 Male</p>
-                        <p><i class="ni ni-pin-3"></i> Subang, Indonesia</p>
-                        <a href="{{ route('student_profile_id', 3) }}" class="btn btn-primary btn-sm">See detail</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card" style="width: 22rem;">
-                    <div class="card-header">
-                        <img class="card-img" src="img/talent-anggie.jpg"
-                            style="width:300px; height: 300px" alt="Card image cap">
-                    </div>
-                    <div class="card-body text-default">
-                        <h2>Ananda Anggie Nur Aini</h2>
-                        <p><i class="ni ni-circle-08"></i> Makeup Artist | 21 Female</p>
-                        <p><i class="ni ni-pin-3"></i> Surabaya, Indonesia</p>
-                        <a href="{{ route('student_profile_id', 4) }}" class="btn btn-primary btn-sm">See detail</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card" style="width: 22rem;">
-                    <div class="card-header">
-                        <img class="card-img" src="img/talent-rico.jpg"
-                            style="width:300px; height: 300px" alt="Card image cap">
-                    </div>
-                    <div class="card-body text-default">
-                        <h2>Rico Kasdim</h2>
-                        <p><i class="ni ni-circle-08"></i> Product Designer | 21 Male</p>
-                        <p><i class="ni ni-pin-3"></i> Jakarta, Indonesia</p>
-                        <a href="{{ route('student_profile_id', 5) }}" class="btn btn-primary btn-sm">See detail</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card" style="width: 22rem;">
-                    <div class="card-header">
-                        <img class="card-img" src="img/talent-nanda.jpg"
-                            style="width:300px; height: 300px" alt="Card image cap">
-                    </div>
-                    <div class="card-body text-default">
-                        <h2>Nanda Arfan Hakim</h2>
-                        <p><i class="ni ni-circle-08"></i> Photograper | 21 Male</p>
-                        <p><i class="ni ni-pin-3"></i> Bandung, Indonesia</p>
-                        <a href="{{ route('student_profile_id', 6) }}" class="btn btn-primary btn-sm">See detail</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card" style="width: 22rem;">
-                    <div class="card-header">
-                        <img class="card-img" src="img/talent-elora.jpg"
-                            style="width:300px; height: 300px" alt="Card image cap">
-                    </div>
-                    <div class="card-body text-default">
-                        <h2>Elora Azalea</h2>
-                        <p><i class="ni ni-circle-08"></i> Model | 21 Female</p>
-                        <p><i class="ni ni-pin-3"></i> Bandung, Indonesia</p>
-                        <a href="{{ route('student_profile_id', 7) }}" class="btn btn-primary btn-sm">See detail</a>
-                    </div>
-                </div>
-            </div>
-                        <div class="col-md-3">
-                <div class="card" style="width: 22rem;">
-                    <div class="card-header">
-                        <img class="card-img" src="img/talent-john.jpg"
-                            style="width:300px; height: 300px" alt="Card image cap">
-                    </div>
-                    <div class="card-body text-default">
-                        <h2>John Doe</h2>
-                        <p><i class="ni ni-circle-08"></i> Guitarist | 23 Male</p>
-                        <p><i class="ni ni-pin-3"></i> Bandung, Indonesia</p>
-                        <a href="{{ route('student_profile_id', 8) }}" class="btn btn-primary btn-sm">See detail</a>
-                    </div>
-                </div>
-            </div>
+            @endforeach
+        </div>
+    </div>
 
 
-            @yield('body_content')
 
-            <!--   Core JS Files   -->
-            <script src="{{ asset('argon/js/core/jquery.min.js') }}" type="text/javascript"></script>
-            <script src="{{ asset('argon/js/core/popper.min.js') }}" type="text/javascript"></script>
-            <script src="{{ asset('argon/js/core/bootstrap.min.js') }}" type="text/javascript"></script>
-            <script src="{{ asset('argon/js/plugins/perfect-scrollbar.jquery.min.js') }}"></script>
-            <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
-            <script src="{{ asset('argon/js/plugins/bootstrap-switch.js') }}"></script>
-            <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-            <script src="{{ asset('argon/js/plugins/nouislider.min.js') }}" type="text/javascript"></script>
-            <script src="{{ asset('argon/js/plugins/moment.min.js') }}"></script>
-            <script src="{{ asset('argon/js/plugins/datetimepicker.js') }}" type="text/javascript"></script>
-            <script src="{{ asset('argon/js/plugins/bootstrap-datepicker.min.js') }}"></script>
-            <!-- Control Center for Argon UI Kit: parallax effects, scripts for the example pages etc -->
-            <!--  Google Maps Plugin    -->
-            <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
-            <script src="{{ asset('argon/js/argon-design-system.min.js?v=1.2.2') }}" type="text/javascript">
-            </script>
-            <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+    <!--   Core JS Files   -->
+    <script src="{{ asset('argon/js/core/jquery.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('argon/js/core/popper.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('argon/js/core/bootstrap.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('argon/js/plugins/perfect-scrollbar.jquery.min.js') }}"></script>
+    <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+    <script src="{{ asset('argon/js/plugins/bootstrap-switch.js') }}"></script>
+    <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+    <script src="{{ asset('argon/js/plugins/nouislider.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('argon/js/plugins/moment.min.js') }}"></script>
+    <script src="{{ asset('argon/js/plugins/datetimepicker.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('argon/js/plugins/bootstrap-datepicker.min.js') }}"></script>
+    <!-- Control Center for Argon UI Kit: parallax effects, scripts for the example pages etc -->
+    <!--  Google Maps Plugin    -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+    <script src="{{ asset('argon/js/argon-design-system.min.js?v=1.2.2') }}" type="text/javascript">
+    </script>
+    <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
 
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
-            <script src="{{ asset('js/custom/brand_slider.js') }}"></script>
-            <script>
-                window.TrackJS &&
-                    TrackJS.install({
-                        token: "ee6fab19c5a04ac1a32a645abde4613a",
-                        application: "argon-design-system-pro"
-                    });
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
+    <script src="{{ asset('js/custom/brand_slider.js') }}"></script>
+    <script>
+        window.TrackJS &&
+            TrackJS.install({
+                token: "ee6fab19c5a04ac1a32a645abde4613a",
+                application: "argon-design-system-pro"
+            });
 
-            </script>
+    </script>
 </body>
-
 </html>
