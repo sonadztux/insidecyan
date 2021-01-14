@@ -1,0 +1,155 @@
+<!--
+=========================================================
+* Argon Design System - v1.2.2
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/argon-design-system
+* Copyright 2020 Creative Tim (https://www.creative-tim.com)
+
+Coded by www.creative-tim.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('argon/img/apple-icon.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('argon/img/favicon.png') }}">
+    <title>@yield('title') - InsideCyan</title> 
+        
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <!-- Nucleo Icons -->
+    <link href="{{ asset('argon/css/nucleo-icons.css') }}" rel="stylesheet" />
+    <link href="{{ asset('argon/css/nucleo-svg.css') }}" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <link href="{{ asset('argon/css/font-awesome.css') }}" rel="stylesheet" />
+    <link href="{{ asset('argon/css/nucleo-svg.css') }}" rel="stylesheet" />
+    <!-- CSS Files -->
+    <link href="{{ asset('argon/css/argon-design-system.css?v=1.2.2') }}" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+    <link rel="stylesheet" href="{{ asset('css/custom/brand_slider.css') }}">
+
+</head>
+<body class="@yield('class')">
+    <!-- Navbar -->
+    <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light py-2">
+        <div class="container">
+            <a class="navbar-brand" href="{{ route('index') }}">
+                <img src="{{ asset('argon/img/brand/insidecyan-white.png') }}">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global"
+                aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navbar_global">
+                <div class="navbar-collapse-header">
+                    <div class="row">
+                        <div class="col-6 collapse-brand">
+                            <a href="{{ route('index') }}">
+                                {{-- <img src="{{ asset('argon/img/brand/blue.png') }}"> --}}
+                                InsideCyan
+                            </a>
+                        </div>
+                        <div class="col-6 collapse-close">
+                            <button type="button" class="navbar-toggler" data-toggle="collapse"
+                                data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('talent.directory') }}">Talent Directory</a>
+                    </li>
+                </ul>
+                @guest
+                <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+                            @if (Route::has('login'))
+                                <li class="nav-item">
+                        <a class="btn btn-info" href="{{ route('login') }}">
+                            <span class="nav-link-inner--text">Sign In</span>
+                        </a>
+                    </li>
+                            @endif
+                            
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                        <a class="btn btn-neutral" href="{{ route('register') }}">
+                            <span class="nav-link-inner--text">Sign Up</span>
+                        </a>
+                    </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+@yield('body_content')
+
+<!--   Core JS Files   -->
+<script src="{{ asset('argon/js/core/jquery.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('argon/js/core/popper.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('argon/js/core/bootstrap.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('argon/js/plugins/perfect-scrollbar.jquery.min.js') }}"></script>
+<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+<script src="{{ asset('argon/js/plugins/bootstrap-switch.js') }}"></script>
+<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+<script src="{{ asset('argon/js/plugins/nouislider.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('argon/js/plugins/moment.min.js') }}"></script>
+<script src="{{ asset('argon/js/plugins/datetimepicker.js') }}" type="text/javascript"></script>
+<script src="{{ asset('argon/js/plugins/bootstrap-datepicker.min.js') }}"></script>
+<!-- Control Center for Argon UI Kit: parallax effects, scripts for the example pages etc -->
+<!--  Google Maps Plugin    -->
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+<script src="{{ asset('argon/js/argon-design-system.min.js?v=1.2.2') }}" type="text/javascript"></script>
+<script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
+<script src="{{ asset('js/custom/brand_slider.js') }}"></script>
+<script>
+    window.TrackJS &&
+        TrackJS.install({
+            token: "ee6fab19c5a04ac1a32a645abde4613a",
+            application: "argon-design-system-pro"
+        });
+
+</script>
+</body>
+
+</html>
